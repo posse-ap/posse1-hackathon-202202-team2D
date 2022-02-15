@@ -5,6 +5,9 @@
 ひろき
 ============================ */
 
+// 進行を可視化
+let progress = document.querySelectorAll('.progress_list .progress_item');
+
 // // yes/noおされたら、day(i+)となる
 let day = 1;
 const questionArea = document.querySelector(".question_title")
@@ -14,7 +17,7 @@ let questionContent =[
     "ディズニーに行くとしたらランド派だ",
     "長続きの秘訣はおはようおやすみLINE",
 ];
-const updateDay = function() {LINE
+const updateDay = function() {
     const changeDay = document.querySelector('.date p');
     changeDay.textContent = `Day${day}`;
     }
@@ -25,7 +28,7 @@ options.forEach(option =>{
         console.log(this);
         day++;
         questionArea.textContent= questionContent[day-1]
-        
+        progress[day-1].classList.add('complete');
         updateDay();
         
         return;
@@ -42,6 +45,7 @@ back.addEventListener('click', function(){
     console.log(this);
     day--;
     questionArea.textContent= questionContent[day-1]
+    progress[day].classList.remove('complete');
     updateDay();
     return;
 })
@@ -150,6 +154,8 @@ label3[1].addEventListener('click', function(){
     label4[1].style.display = "block";
     return;
 })
+
+
 
 /* ============================
 かもりゅう
