@@ -9,9 +9,10 @@ html {
         font-size: 50%;
     }
     
-    /* .modal{
-        margin: 0 auto;
-    } */
+    .fade {
+        padding-top: 15rem;
+    }
+   
 }
 
 * {
@@ -40,21 +41,27 @@ header {
 
 .header_inner {
     border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
 }
 
 .header_logo {
     border: 1px solid gold;
-    padding: 1rem;
+    width: 23%;
 }
 
 .header_logo img {
     border: solid 1px black;
-    width: 30rem;
     height: auto;
 }
 
+.header_title{
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
 .progress {
-    margin-top: 5rem;
+    margin-top: 2rem;
     border: 1px solid red;
 }
 
@@ -112,8 +119,8 @@ header {
 
 .main {
     border: 1px solid red;
-    margin-top: 1rem;
-    padding: 3rem;
+    margin-top: 2rem;
+    /* padding: 3rem; */
     position: relative;
     /* width: 100%; */
     
@@ -219,34 +226,46 @@ header {
 /* 設問毎のボタンを区別する */
 .question1{
     display: flex;
-    gap: 20rem;
+    gap: 5rem;
     justify-content: center;
     padding: 1rem;
 }
 .question2{
     display: none;
-    gap: 20rem;
+    gap: 5rem;
     justify-content: center;
     padding: 1rem;
 }
 .question3{
     display: none;
-    gap: 20rem;
+    gap: 5rem;
     justify-content: center;
     padding: 1rem;
 }
 .question4{
     display: none;
-    gap: 20rem;
+    gap: 5rem;
     justify-content: center;
     padding: 1rem;
 }
 /* .btn2{
     display: none;
 } */
+.label1{
+    display: none;
+    width: 15rem;
+    height: 5rem;
+    color: #b20000;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+    border: 2px solid #006dd9;
+    border-radius: 5px;
+}
+
 .label2{
     display: none;
-    width: 30rem;
+    width: 15rem;
     height: 5rem;
     color: #b20000;
     text-align: center;
@@ -263,7 +282,7 @@ header {
 } */
 .label3{
     display: none;
-    width: 30rem;
+    width: 15rem;
     height: 5rem;
     color: #b20000;
     text-align: center;
@@ -280,7 +299,7 @@ header {
 } */
 .label4{
     display: none;
-    width: 30rem;
+    width: 15rem;
     height: 5rem;
     color: #b20000;
     text-align: center;
