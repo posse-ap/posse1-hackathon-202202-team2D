@@ -9,12 +9,12 @@
 let day = 1;
 const questionArea = document.querySelector(".question_title")
 let questionContent =[
-    "問題１",
-    "問題２",
-    "問題３",
-    "問題４",
+    "恋人が髪型を変えてきたら似合っていなくても褒める",
+    "優しさでは結婚する気になれない",
+    "ディズニーに行くとしたらランド派だ",
+    "長続きの秘訣はおはようおやすみLINE",
 ];
-const updateDay = function() {
+const updateDay = function() {LINE
     const changeDay = document.querySelector('.date p');
     changeDay.textContent = `Day${day}`;
     }
