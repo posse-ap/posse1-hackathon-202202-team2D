@@ -8,6 +8,10 @@ html {
     html {
         font-size: 50%;
     }
+    
+    /* .modal{
+        margin: 0 auto;
+    } */
 }
 
 * {
@@ -61,6 +65,7 @@ header {
     width: 60rem;
     margin-right: 0;
     margin-left: auto;
+    max-width: 100%;
 }
 
 .progress_item {
@@ -110,6 +115,8 @@ header {
     margin-top: 1rem;
     padding: 3rem;
     position: relative;
+    /* width: 100%; */
+    
 }
 
 .main_center {
@@ -117,6 +124,7 @@ header {
     width: calc(100% - 10rem);
     margin: auto;
     width: 110rem;
+    max-width: 100%;
 }
 
 .fade {
@@ -351,9 +359,8 @@ input[type="radio"]:checked+label {
 }
 
 .modal_overlay {
-    display: none;
     z-index: 1;
-    /* display: none; */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -407,3 +414,4 @@ input[type="radio"]:checked+label {
 .btn_close::after {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
+
