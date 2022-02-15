@@ -81,11 +81,18 @@ html {
         top: 0%!important;
         width: 45%!important;
         right: -1%!important;
+        transform: rotate(29deg)!important;
     }
 
-    .balloon img{
-        border: none !important;
-    }
+        
+.balloon_text {
+    position: absolute !important;
+    top: 40%!important;
+    right: 2%!important;
+    font-size: 1.3rem!important;
+    z-index: 2!important;
+    transform: rotate(0deg)!important;
+}
 
 
 
@@ -284,6 +291,16 @@ header {
     position: absolute;
     top: 0%;
     right: 11%;
+    transform: rotate(20deg);
+}
+
+.balloon_text{
+    position: absolute;
+    top: 47%;
+    right: 18%;
+    font-size: 1.3rem;
+    z-index: 2;
+    transform: rotate(0deg);
 }
 
 
