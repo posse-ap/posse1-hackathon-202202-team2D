@@ -8,29 +8,35 @@ html {
     html {
         font-size: 50%;
     }
-    
-    .fade {
-        padding-top: 15rem;
+    .main{
+        height: 80rem;
     }
+    /* .fade {
+        padding-top: 5rem;
+    } */
     .question1{
         flex-flow: column;
         align-items: center;
         justify-content: center;
+        gap: 3rem!important;
     }
     .question2{
         flex-flow: column;
         align-items: center;
         justify-content: center;
+        gap: 3rem!important;
     }
     .question3{
         flex-flow: column;
         align-items: center;
         justify-content: center;
+        gap: 3rem!important;
     }
     .question4{
         flex-flow: column;
         align-items: center;
         justify-content: center;
+        gap: 3rem!important;
     }
     .label1{
         width: 15rem;
@@ -52,6 +58,9 @@ html {
     .circle-border {
         top: -50%!important;
         left:40%!important;
+    }
+    .fade {
+        left: 0%;
     }
 }
 
@@ -107,7 +116,7 @@ header {
 
 .progress_list {
     position: relative;
-    display: flex;
+    display: none;
     border: 1px solid blue;
     width: 60rem;
     margin-right: 0;
@@ -175,11 +184,12 @@ header {
 }
 
 .fade {
+    max-width: 100%;
     position: absolute;
     top: 3rem;
     /* left: 25%; */
-    /* transform: translate(-50%, -50%);
-    transition: opacity 0.5s 0.5s ease; */
+    /* transform: translate(-50%, -50%); */
+    transition: opacity 0.5s 0.5s ease;
 }
 
 .main_title {
