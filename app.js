@@ -64,7 +64,7 @@ let label3 = document.getElementsByClassName("label3");
 let label4 = document.getElementsByClassName("label4");
 // let q1 = document.getElementsByName("q1");
 //変数bodyTransformation(0<4<8の9段階）の値に応じて、取り出す画像を変化させる
-eachBodyAndMessage = [
+let eachBodyAndMessage = [
             ["./img/girl0.jpg", "さしすせそ"],
             ["./img/girl1.jpg", "かきくけこ"],
             ["./img/girl2.jpg", "あいうえお"],
@@ -171,18 +171,30 @@ label4[0].addEventListener('click', function(){
   spinner.className = 'spinner-box';
   circle_border.className = 'circle-border';
   circle_core.className = 'circle-core';
-  // .loaded を追加してローディング表示を消す
-  // spinner.classList.toggle('loaded');
-  // console.log(submit_info);
   setTimeout(disappearSpinner, 1990);
   setTimeout(showFinish, 2000);
    
     resultImage.src = eachBodyAndMessage[bodyTransformation][0];
+    resultArea.textContent = resultMessage[bodyTransformation];
+    resultMessage
     return;
 })
 
 label4[1].addEventListener('click', function(){
     bodyTransformation++;
+    question4.style.display = "none";
+    // loadingを表示させる
+ let circle_border = document.getElementById('circle-border');
+ let circle_core = document.getElementById('circle-core');
+ spinner.className = 'spinner-box';
+ circle_border.className = 'circle-border';
+ circle_core.className = 'circle-core';
+ setTimeout(disappearSpinner, 1990);
+ setTimeout(showFinish, 2000);
+  
+   resultImage.src = eachBodyAndMessage[bodyTransformation][0];
+   resultArea.textContent = resultMessage[bodyTransformation];
+   return;
 })
 
 // loadingを消す
@@ -194,6 +206,21 @@ function disappearSpinner(){
     modal.classList.remove('fade_out');
     modalOverLay.style.display ="block";
   };
+
+
+let resultMessage = [
+    "あああああ",
+    "いいいいい",
+    "うううううう",
+    "ええええええ",
+    "おおおおおお",
+    "かかかかかか",
+    "きききききき",
+    "くくくくくく",
+    "けけけけけけ"
+];
+
+let resultArea = document.getElementById("result_area");
 
 /* ============================
 かもりゅう
