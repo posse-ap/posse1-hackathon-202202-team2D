@@ -1,25 +1,409 @@
-html{
+html {
     font-size: 62.5%;
 }
+
 /* html全体のサイズを変えることでremを一括コントロール */
 
- @media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     html {
         font-size: 50%;
-       
     }
+}
+
+* {
+    box-sizing: border-box;
 }
 
 img {
     max-width: 100%;
-  }
+}
 
-  /* ----------コンテンツ幅を設定するための共通クラス--------- */
+/* ----------コンテンツ幅を設定するための共通クラス--------- */
 
-  .wrapper{
-      /* とりあえずこの値で */
+.wrapper {
+    /* とりあえずこの値で */
     max-width: 120rem;
-       /* 重要：paddingでwrapperのついたすべてのタグの左右幅をコントロール */
+    /* 重要：paddingでwrapperのついたすべてのタグの左右幅をコントロール */
     padding: 0 3.2rem;
     margin: 0 auto;
-  }
+}
+
+/* ----------以下、mainのcssを実装----------------------- */
+
+header {
+    border: red 1px solid;
+}
+
+.header_inner {
+    border: 1px solid blue;
+}
+
+.header_logo {
+    border: 1px solid gold;
+    padding: 1rem;
+}
+
+.header_logo img {
+    border: solid 1px black;
+    width: 30rem;
+    height: auto;
+}
+
+.progress {
+    margin-top: 5rem;
+    border: 1px solid red;
+}
+
+.progress_list {
+    position: relative;
+    display: flex;
+    border: 1px solid blue;
+    width: 60rem;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.progress_item {
+    position: relative;
+    text-align: center;
+    width: 25%;
+    font-weight: bold;
+    border: 1px solid purple;
+}
+
+.progress_item:before {
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin: 0.7rem auto 2rem auto;
+    content: "";
+    text-align: center;
+    border-radius: 50%;
+    background-color: gray;
+}
+.progress_item:after {
+    position: absolute;
+    z-index: -1;
+    top: 1.5rem;
+    left: -50%;
+    width: 100%;
+    height: 0.2rem;
+    content: "";
+    background-color: gray;
+}
+
+.progress_item:first-child:after {
+    content: none;
+}
+
+.progress_item.complete {
+    color: greenyellow;
+}
+
+.progress_item.complete:before,
+.progress_item.complete:after {
+    background-color: greenyellow;
+}
+
+.main {
+    border: 1px solid red;
+    margin-top: 1rem;
+    padding: 3rem;
+    position: relative;
+}
+
+.main_center {
+    border: 1px solid blue;
+    width: calc(100% - 10rem);
+    margin: auto;
+    width: 110rem;
+}
+
+.fade {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s 0.5s ease;
+}
+
+.main_title {
+    border: 1px solid purple;
+    text-align: center;
+    padding: 3rem;
+    font-size: 4rem;
+}
+
+.main_imgs {
+    border: 1px solid purple;
+    padding: 5rem;
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+}
+
+.main_img {
+    border: 1px solid gold;
+}
+
+.main_img img {
+    border: 1px solid black;
+    width: 20rem;
+    height: auto;
+}
+
+.main_start {
+    border: 1px solid purple;
+    text-align: center;
+    padding: 3rem;
+}
+
+.main_start button {
+    width: 30rem;
+    height: 5rem;
+    cursor: pointer;
+    background-color: aquamarine;
+}
+
+.date {
+    border: 1px solid purple;
+    margin: 2rem 0;
+}
+
+.date p {
+    border: 1px solid greenyellow;
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.questions {
+    border: 1px solid purple;
+}
+
+.question_title {
+    border: 1px solid greenyellow;
+    text-align: center;
+    padding: 1rem;
+    font-size: 3rem;
+}
+
+.question_img {
+    border: 1px solid gold;
+    width: 100%;
+    text-align: center;
+}
+
+.question_img img {
+    border: 1px solid black;
+    width: 28rem;
+    height: auto;
+}
+
+.options {
+    border: 1px solid purple;
+    /* display: flex;
+    gap: 20rem;
+    justify-content: center;
+    padding: 1rem; */
+}
+
+/* 設問毎のボタンを区別する */
+.question1{
+    display: flex;
+    gap: 20rem;
+    justify-content: center;
+    padding: 1rem;
+}
+.question2{
+    display: none;
+    gap: 20rem;
+    justify-content: center;
+    padding: 1rem;
+}
+.question3{
+    display: none;
+    gap: 20rem;
+    justify-content: center;
+    padding: 1rem;
+}
+.question4{
+    display: none;
+    gap: 20rem;
+    justify-content: center;
+    padding: 1rem;
+}
+/* .btn2{
+    display: none;
+} */
+.label2{
+    display: none;
+    width: 30rem;
+    height: 5rem;
+    color: #b20000;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+    border: 2px solid #006dd9;
+    border-radius: 5px;
+}
+.label2:hover {
+    background-color: #e2edf9;
+}
+/* .btn3{
+    display: none;
+} */
+.label3{
+    display: none;
+    width: 30rem;
+    height: 5rem;
+    color: #b20000;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+    border: 2px solid #006dd9;
+    border-radius: 5px;
+}
+.label3:hover {
+    background-color: #e2edf9;
+}
+/* .btn4{
+    display: none;
+} */
+.label4{
+    display: none;
+    width: 30rem;
+    height: 5rem;
+    color: #b20000;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+    border: 2px solid #006dd9;
+    border-radius: 5px;
+}
+.label4:hover {
+    background-color: #e2edf9;
+}
+/* .stop_day{
+    pointer-events: none;
+} */
+.back {
+    text-align: center;
+    padding: 1rem;
+}
+
+.back button {
+    background-color: aqua;
+    cursor: pointer;
+    width: 30rem;
+    height: 5rem;
+    font-size: 2rem;
+}
+
+.fade_in {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.fade_out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked+label {
+    background: #31a9ee;
+    color: #ffffff;
+}
+
+.label:hover {
+    background-color: #e2edf9;
+}
+
+.label1 {
+    display: block;
+    width: 30rem;
+    height: 5rem;
+    color: #b20000;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+    border: 2px solid #006dd9;
+    border-radius: 5px;
+}
+
+.modal {
+    /* display: none; */
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFFFFF;
+    width: 92%;
+    height: 54%;
+    z-index: 2;
+    border-radius: 4rem;
+
+}
+
+.modal_overlay {
+    display: none;
+    z-index: 1;
+    /* display: none; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(68, 68, 68, 0.8);
+}
+
+.modal_contents {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal_contents div,p{
+    line-height: 5.5rem;
+    font-size: 3rem;
+}
+
+.btn_close {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background-color: #F5F5F8;
+    float: right;
+    margin-right: 25px;
+    cursor: pointer;
+    margin-top: 26px;
+    margin-bottom: -45px;
+}
+
+.btn_close::before, .btn_close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 22px;
+    background-color: #A3A3A4;
+}
+
+.btn_close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn_close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}

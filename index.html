@@ -1,20 +1,110 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>恋愛シミュレーションゲーム（仮）</title>
+    <title>あなたの婚期はいつ？</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
 
+    <header>
+        <div class="header_inner wrapper">
+            <div class="header_logo">
+                <img src="./img/posseLogo.jpg" alt="POSSEロゴ" width="485" height="108">
+            </div>
+        </div>
+    </header>
 
+    <section class="progress wrapper">
+        <ul class="progress_list">
+            <li class="progress_item complete"><a href="#">第1問</a></li>
+            <li class="progress_item complete"><a href="#">第2問</a></li>
+            <li class="progress_item"><a href="#">第3問</a></li>
+            <li class="progress_item "><a href="#">第4問</a></li>
+        </ul>
+    </section>
 
+    <main class="main wrapper">
+        <div id="main_center" class="main_center">
+            <h1 class="main_title">シミュレーションゲーム</h1>
+            <div class="main_imgs">
+                <div class="main_img">
+                    <img src="./img/girl4.png" alt="キャラクター1" width="397" height="397">
+                </div>
+                <div class="main_img">
+                    <img src="./img/girl4.png" alt="キャラクター2" width="397" height="397">
+                </div>
+                <div class="main_img">
+                    <img src="./img/girl4.png" alt="キャラクター3" width="397" height="397">
+                </div>
+            </div>
+            <div class="main_start">
+                <button id="btn_start">START</button>
+            </div>
+        </div>
 
+        <div id="main_center_day1" class="main_center fade fade_out">
+            <div class="date">
+                <p>Day1</p>
+            </div>
+            <div class="questions">
+                <p class="question_title">恋人が髪型を変えてきたら似合っていなくても褒める</p>
+                <div class="question_img">
+                    <img src="./img/girl4.png" alt="" width="397" height="397">
+                </div>
+            </div>
+            <div class="options">
+            <div class="question1">
+                <input id="q1-y" class="btn1" name="q1" type="radio" value="1"><label class="label1"
+                    for="q1-y">YES</label>
+                <input id="q1-n" class="btn1" name="q1" type="radio" value="0"><label class="label1" for="q1-n">NO</label>
+            </div>
+            <div class="question2">
+                <input id="q1-y" class="btn2" name="q1" type="radio" value="1"><label class="label2"
+                    for="q1-y">YES</label>
+                <input id="q1-n" class="btn2" name="q1" type="radio" value="0"><label class="label2" for="q1-n">NO</label>
+            </div>
+            <div class="question3">
+                <input id="q1-y" class="btn3" name="q1" type="radio" value="1"><label class="label3"
+                    for="q1-y">YES</label>
+                <input id="q1-n" class="btn3" name="q1" type="radio" value="0"><label class="label3" for="q1-n">NO</label>
+            </div>
+            <div class="question4">
+                <input id="q1-y" class="btn4" name="q1" type="radio" value="1"><label class="label4"
+                    for="q1-y">YES</label>
+                <input id="q1-n" class="btn4" name="q1" type="radio" value="0"><label class="label4" for="q1-n">NO</label>
+            </div>
+            </div>
+            <div class="back">
+                <button>戻る</button>
+            </div>
+        </div>
+
+        <section id="modal" class="modal fade_out">
+            <span id="btn_close" class="btn_close"></span>
+            <div class="modal_contents">
+                <div>あなたの結果は...</div>
+                <div>
+                    <p>「」です！！</p>
+                </div>
+                <!-- <button>結果に戻る</button> -->
+                <!-- Twitterの共有ボタンを追加する -->
+                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" 
+                data-url="https://posse-ap.com/" data-hashtags="POSSE"data-show-count="false"></a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="line-it-button" data-lang="ja" data-type="share-a" data-env="REAL" data-url=" https://posse-ap.github.io/posse1-hackathon-202202-team2D/" data-color="default" data-size="large" data-count="false" data-ver="3" style="display: none;"></div>
+<script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+            </div>
+        </section>
+    </main>
+    <div class="modal_overlay"></div>
 
     <script src="app.js"></script>
 </body>
+
 </html>
