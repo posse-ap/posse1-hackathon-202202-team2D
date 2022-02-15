@@ -13,7 +13,14 @@ html {
 @media screen and (max-width: 767px) {
     html {
         font-size: 50%;
+        overflow: hidden;
+        
     }
+
+    body{
+        overflow: hidden;
+    };
+    
     .main{
         height: 80rem;
     }
@@ -61,7 +68,7 @@ html {
         width: 15rem;
     }
     .modal{
-        top: 100%!important;
+        top: 54%!important;
         height: 90%!important;
     }
     .circle-border {
