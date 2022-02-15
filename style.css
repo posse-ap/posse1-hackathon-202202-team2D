@@ -47,9 +47,65 @@ header {
     height: auto;
 }
 
+.progress {
+    margin-top: 5rem;
+    border: 1px solid red;
+}
+
+.progress_list {
+    position: relative;
+    display: flex;
+    border: 1px solid blue;
+    width: 60rem;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.progress_item {
+    position: relative;
+    text-align: center;
+    width: 25%;
+    font-weight: bold;
+    border: 1px solid purple;
+}
+
+.progress_item:before {
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin: 0.7rem auto 2rem auto;
+    content: "";
+    text-align: center;
+    border-radius: 50%;
+    background-color: gray;
+}
+.progress_item:after {
+    position: absolute;
+    z-index: -1;
+    top: 1.5rem;
+    left: -50%;
+    width: 100%;
+    height: 0.2rem;
+    content: "";
+    background-color: gray;
+}
+
+.progress_item:first-child:after {
+    content: none;
+}
+
+.progress_item.complete {
+    color: greenyellow;
+}
+
+.progress_item.complete:before,
+.progress_item.complete:after {
+    background-color: greenyellow;
+}
+
 .main {
     border: 1px solid red;
-    margin-top: 4rem;
+    margin-top: 1rem;
     padding: 3rem;
     position: relative;
 }
@@ -177,8 +233,8 @@ input[type="radio"] {
     display: none;
 }
 input[type="radio"]:checked + label {
-    background: #31a9ee; 
-    color: #ffffff; 
+    background: #31a9ee;
+    color: #ffffff;
 }
 .label:hover {
     background-color: #e2edf9;
