@@ -4,6 +4,33 @@
 /* ============================
 ひろき
 ============================ */
+
+// // yes/noおされたら、day(i+)となる
+let day = 1;
+const updateDay = function() {
+    const changeDay = document.querySelector('.date p');
+    changeDay.textContent = `Day${day}`;
+    }
+
+let options = document.querySelectorAll('.options input');
+options.forEach(option =>{
+    option.addEventListener('click', function(){
+        console.log(this);
+        day++;
+        updateDay();
+        return;
+    })
+})
+let back = document.querySelector('.back');
+back.addEventListener('click', function(){
+    console.log(this);
+    day--;
+    updateDay();
+    return;
+})
+
+let bodyTransformation 
+
 /* ============================
 かもりゅう
 ============================ */
