@@ -144,12 +144,91 @@ header {
 
 .options {
     border: 1px solid purple;
+    /* display: flex;
+    gap: 20rem;
+    justify-content: center;
+    padding: 1rem; */
+}
+
+/* 設問毎のボタンを区別する */
+.question1{
     display: flex;
     gap: 20rem;
     justify-content: center;
     padding: 1rem;
 }
-
+.question2{
+    display: none;
+    gap: 20rem;
+    justify-content: center;
+    padding: 1rem;
+}
+.question3{
+    display: none;
+    gap: 20rem;
+    justify-content: center;
+    padding: 1rem;
+}
+.question4{
+    display: none;
+    gap: 20rem;
+    justify-content: center;
+    padding: 1rem;
+}
+/* .btn2{
+    display: none;
+} */
+.label2{
+    display: none;
+    width: 30rem;
+    height: 5rem;
+    color: #b20000;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+    border: 2px solid #006dd9;
+    border-radius: 5px;
+}
+.label2:hover {
+    background-color: #e2edf9;
+}
+/* .btn3{
+    display: none;
+} */
+.label3{
+    display: none;
+    width: 30rem;
+    height: 5rem;
+    color: #b20000;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+    border: 2px solid #006dd9;
+    border-radius: 5px;
+}
+.label3:hover {
+    background-color: #e2edf9;
+}
+/* .btn4{
+    display: none;
+} */
+.label4{
+    display: none;
+    width: 30rem;
+    height: 5rem;
+    color: #b20000;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+    border: 2px solid #006dd9;
+    border-radius: 5px;
+}
+.label4:hover {
+    background-color: #e2edf9;
+}
+/* .stop_day{
+    pointer-events: none;
+} */
 .back {
     text-align: center;
     padding: 1rem;
@@ -180,11 +259,11 @@ input[type="radio"]:checked + label {
     background: #31a9ee; 
     color: #ffffff; 
 }
-.label:hover {
+.label1:hover {
     background-color: #e2edf9;
 }
 
-.label {
+.label1 {
     display: block;
     width: 30rem;
     height: 5rem;
