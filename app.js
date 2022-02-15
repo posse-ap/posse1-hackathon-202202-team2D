@@ -70,7 +70,7 @@ let eachBodyAndMessage = [
             ["./img/girl2.jpg", "あいうえお"],
             ["./img/girl3.jpg", "サンプル"],
             ["./img/girl4.jpg", "イケメン大好き"],
-            ["./img/girl5.jpg", "お金ないとちょっとなあ、、"],
+            ["./img/girl5.jpg", "お金ないとなあ、、"],
             ["./img/girl6.jpg", "気高く生きるのよ私！"],
             ["./img/girl7.jpg", "あのヒトしか考えられない！"],
             ["./img/girl8.jpg", "ふわああ"]
@@ -78,6 +78,7 @@ let eachBodyAndMessage = [
 
 let bodyTransformation = 4;
 const currentImage = document.querySelector('.question_img img');
+const balloonText = document.querySelector('.balloon_text');
 // 変数の値は、なんの選択肢を選んだかで変動させる
 // 優しい人が好き（y:ばあさん n:若返り)
 // デートで、恋人が髪型を変えてきたら褒めるべき？(y:若返り n:ばあさん）
@@ -89,7 +90,7 @@ label1[0].addEventListener('click', function(){
     console.log(this);
     bodyTransformation--;
     currentImage.src = eachBodyAndMessage[bodyTransformation][0];
-    // messageArea.textContent = eachBodyAndMessage[bodyTransformation][1];
+    balloonText .textContent = eachBodyAndMessage[bodyTransformation][1];
     question1.style.display = "none";
     question2.style.display = "flex";
     label2[0].style.display = "block";
@@ -100,7 +101,7 @@ label1[1].addEventListener('click', function(){
     console.log(this);
     bodyTransformation++;
     currentImage.src = eachBodyAndMessage[bodyTransformation][0];
-    // messageArea.textContent = eachBodyAndMessage[bodyTransformation][1];
+    balloonText .textContent = eachBodyAndMessage[bodyTransformation][1];
     question1.style.display = "none";
     question2.style.display = "flex";
     label2[0].style.display = "block";
@@ -113,7 +114,7 @@ label2[0].addEventListener('click', function(){
     console.log(this);
     bodyTransformation--;
     currentImage.src = eachBodyAndMessage[bodyTransformation][0];
-    // messageArea.textContent = eachBodyAndMessage[bodyTransformation][1];
+    balloonText .textContent = eachBodyAndMessage[bodyTransformation][1];
     question2.style.display = "none";
     question3.style.display = "flex";
     label3[0].style.display = "block";
@@ -124,7 +125,7 @@ label2[1].addEventListener('click', function(){
     console.log(this);
     bodyTransformation++;
     currentImage.src = eachBodyAndMessage[bodyTransformation][0];
-    // messageArea.textContent = eachBodyAndMessage[bodyTransformation][1];
+    balloonText .textContent = eachBodyAndMessage[bodyTransformation][1];
     question2.style.display = "none";
     question3.style.display = "flex";
     label3[0].style.display = "block";
@@ -136,7 +137,7 @@ label3[0].addEventListener('click', function(){
     console.log(this);
     bodyTransformation--;
     currentImage.src = eachBodyAndMessage[bodyTransformation][0];
-    // messageArea.textContent = eachBodyAndMessage[bodyTransformation][1];
+    balloonText .textContent = eachBodyAndMessage[bodyTransformation][1];
     question3.style.display = "none";
     question4.style.display = "flex";
     label4[0].style.display = "block";
@@ -147,7 +148,7 @@ label3[1].addEventListener('click', function(){
     console.log(this);
     bodyTransformation++;
     currentImage.src = eachBodyAndMessage[bodyTransformation][0];
-    // messageArea.textContent = eachBodyAndMessage[bodyTransformation][1];
+    balloonText .textContent = eachBodyAndMessage[bodyTransformation][1];
     question3.style.display = "none";
     question4.style.display = "flex";
     label4[0].style.display = "block";
@@ -210,14 +211,14 @@ function disappearSpinner(){
 
 let resultMessage = [
     "あああああ",
-    "いいいいい",
+    "法律であなたの愛をしばることはできないわ、未成年が適齢期よ",
     "うううううう",
     "ええええええ",
     "おおおおおお",
     "かかかかかか",
     "きききききき",
     "くくくくくく",
-    "けけけけけけ"
+    "来世でのご好運を願っています"
 ];
 
 let resultArea = document.getElementById("result_area");

@@ -314,7 +314,7 @@ header {
 .balloon_text{
     position: absolute;
     top: 47%;
-    right: 18%;
+    right: 20%;
     font-size: 1.3rem;
     z-index: 2;
     transform: rotate(0deg);
@@ -469,7 +469,7 @@ input[type="radio"]:checked+label {
     transform: translate(-50%, -50%);
     background-color: #FFFFFF;
     width: 92%;
-    height: 54%;
+    height: 70%;
     z-index: 2;
     border-radius: 4rem;
 
@@ -597,6 +597,7 @@ input[type="radio"]:checked+label {
   .result_img{
       width: 20rem;
       height: 20rem;
+      margin: 0 auto;
   }
   .result_img img{
       width: 100%;
