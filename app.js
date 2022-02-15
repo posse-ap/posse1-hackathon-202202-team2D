@@ -7,6 +7,13 @@
 
 // // yes/noおされたら、day(i+)となる
 let day = 1;
+const questionArea = document.querySelector(".question_title")
+let questionContent =[
+    "問題１",
+    "問題２",
+    "問題３",
+    "問題４",
+];
 const updateDay = function() {
     const changeDay = document.querySelector('.date p');
     changeDay.textContent = `Day${day}`;
@@ -17,6 +24,7 @@ options.forEach(option =>{
     option.addEventListener('click', function(){
         console.log(this);
         day++;
+        questionArea.textContent= questionContent[day-1]
         
         updateDay();
         
@@ -33,9 +41,11 @@ let back = document.querySelector('.back');
 back.addEventListener('click', function(){
     console.log(this);
     day--;
+    questionArea.textContent= questionContent[day-1]
     updateDay();
     return;
 })
+
 let question1 = document.querySelector(".question1");
 let question2 = document.querySelector(".question2");
 let question3 = document.querySelector(".question3");
@@ -49,19 +59,21 @@ let label2 = document.getElementsByClassName("label2");
 let label3 = document.getElementsByClassName("label3");
 let label4 = document.getElementsByClassName("label4");
 // let q1 = document.getElementsByName("q1");
-// 以下の変数(0<4<8の9段階）の値に応じて、取り出す画像を変化させる
-eachBody = ["./img/posseLogo.jpg",
-            "./img/posseLogo.jpg",
-            "./img/irl2.png",
-            "./img/girl3.png",
-            "./img/girl4.png",
-            "./img/girl5.png",
-            "./img/girl6.png"];
+//変数bodyTransformation(0<4<8の9段階）の値に応じて、取り出す画像を変化させる
+eachBodyAndMessage = [
+            ["./img/irl0.png", "さしすせそ"],
+            ["./img/irl1.png", "かきくけこ"],
+            ["./img/irl2.png", "あいうえお"],
+            ["./img/girl3.png", "サンプル"],
+            ["./img/girl4.png", "イケメン大好き"],
+            ["./img/girl5.png", "お金ないとちょっとなあ、、"],
+            ["./img/girl6.png", "気高く生きるのよ私！"],
+            ["./img/girl7.png", "あのヒトしか考えられない！"],
+            ["./img/girl8.png", "ふわああ"]
+            ];
 
-const currentImage = document.querySelector('.question_img img');
 let bodyTransformation = 4;
-console.log(eachBody[bodyTransformation]);
-
+const currentImage = document.querySelector('.question_img img');
 // 変数の値は、なんの選択肢を選んだかで変動させる
 // 優しい人が好き（y:ばあさん n:若返り)
 // デートで、恋人が髪型を変えてきたら褒めるべき？(y:若返り n:ばあさん）
@@ -72,7 +84,8 @@ console.log(eachBody[bodyTransformation]);
 label1[0].addEventListener('click', function(){
     console.log(this);
     bodyTransformation--;
-    currentImage.src = eachBody[bodyTransformation];
+    currentImage.src = eachBodyAndMessage[bodyTransformation][0];
+    // messageArea.textContent = eachBodyAndMessage[bodyTransformation][1];
     question1.style.display = "none";
     question2.style.display = "flex";
     label2[0].style.display = "block";
@@ -82,7 +95,8 @@ label1[0].addEventListener('click', function(){
 label1[1].addEventListener('click', function(){
     console.log(this);
     bodyTransformation++;
-    currentImage.src = eachBody[bodyTransformation];
+    currentImage.src = eachBodyAndMessage[bodyTransformation][0];
+    // messageArea.textContent = eachBodyAndMessage[bodyTransformation][1];
     question1.style.display = "none";
     question2.style.display = "flex";
     label2[0].style.display = "block";
@@ -94,7 +108,8 @@ label1[1].addEventListener('click', function(){
 label2[0].addEventListener('click', function(){
     console.log(this);
     bodyTransformation--;
-    currentImage.src = eachBody[bodyTransformation];
+    currentImage.src = eachBodyAndMessage[bodyTransformation][0];
+    // messageArea.textContent = eachBodyAndMessage[bodyTransformation][1];
     question2.style.display = "none";
     question3.style.display = "flex";
     label3[0].style.display = "block";
@@ -104,7 +119,8 @@ label2[0].addEventListener('click', function(){
 label2[1].addEventListener('click', function(){
     console.log(this);
     bodyTransformation++;
-    currentImage.src = eachBody[bodyTransformation];
+    currentImage.src = eachBodyAndMessage[bodyTransformation][0];
+    // messageArea.textContent = eachBodyAndMessage[bodyTransformation][1];
     question2.style.display = "none";
     question3.style.display = "flex";
     label3[0].style.display = "block";
@@ -115,7 +131,8 @@ label2[1].addEventListener('click', function(){
 label3[0].addEventListener('click', function(){
     console.log(this);
     bodyTransformation--;
-    currentImage.src = eachBody[bodyTransformation];
+    currentImage.src = eachBodyAndMessage[bodyTransformation][0];
+    // messageArea.textContent = eachBodyAndMessage[bodyTransformation][1];
     question3.style.display = "none";
     question4.style.display = "flex";
     label4[0].style.display = "block";
@@ -125,7 +142,8 @@ label3[0].addEventListener('click', function(){
 label3[1].addEventListener('click', function(){
     console.log(this);
     bodyTransformation++;
-    currentImage.src = eachBody[bodyTransformation];
+    currentImage.src = eachBodyAndMessage[bodyTransformation][0];
+    // messageArea.textContent = eachBodyAndMessage[bodyTransformation][1];
     question3.style.display = "none";
     question4.style.display = "flex";
     label4[0].style.display = "block";
