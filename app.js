@@ -65,15 +65,15 @@ let label4 = document.getElementsByClassName("label4");
 // let q1 = document.getElementsByName("q1");
 //変数bodyTransformation(0<4<8の9段階）の値に応じて、取り出す画像を変化させる
 eachBodyAndMessage = [
-            ["./img/irl0.png", "さしすせそ"],
-            ["./img/irl1.png", "かきくけこ"],
-            ["./img/irl2.png", "あいうえお"],
-            ["./img/girl3.png", "サンプル"],
-            ["./img/girl4.png", "イケメン大好き"],
-            ["./img/girl5.png", "お金ないとちょっとなあ、、"],
-            ["./img/girl6.png", "気高く生きるのよ私！"],
-            ["./img/girl7.png", "あのヒトしか考えられない！"],
-            ["./img/girl8.png", "ふわああ"]
+            ["./img/girl0.jpg", "さしすせそ"],
+            ["./img/girl1.jpg", "かきくけこ"],
+            ["./img/girl2.jpg", "あいうえお"],
+            ["./img/girl3.jpg", "サンプル"],
+            ["./img/girl4.jpg", "イケメン大好き"],
+            ["./img/girl5.jpg", "お金ないとちょっとなあ、、"],
+            ["./img/girl6.jpg", "気高く生きるのよ私！"],
+            ["./img/girl7.jpg", "あのヒトしか考えられない！"],
+            ["./img/girl8.jpg", "ふわああ"]
             ];
 
 let bodyTransformation = 4;
