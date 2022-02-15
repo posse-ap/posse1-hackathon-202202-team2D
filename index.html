@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +9,57 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <header>
+        <div class="header_inner wrapper">
+            <div class="header_logo">
+                <img src="/img/posseLogo.jpg" alt="POSSEロゴ" width="485" height="108">
+            </div>
+        </div>
+    </header>
 
+    <main class="main wrapper">
+        <div class="main_center fade_out">
+            <h1 class="main_title">恋愛シミュレーションゲーム</h1>
+            <div class="main_imgs">
+                <div class="main_img">
+                    <img src="./img/girl.png" alt="キャラクター1" width="397" height="397">
+                </div>
+                <div class="main_img">
+                    <img src="./img/girl.png" alt="キャラクター2" width="397" height="397">
+                </div>
+                <div class="main_img">
+                    <img src="./img/girl.png" alt="キャラクター3" width="397" height="397">
+                </div>
+            </div>
+            <div class="main_start">
+                <button>START</button>
+            </div>
+        </div>
 
-
-
+        <div class="main_center fade fade_in">
+            <div class="date">
+                <p>Day1</p>
+            </div>
+            <div class="questions">
+                <p class="question_title">質問内容をここに書きます</p>
+                <div class="question_img">
+                    <img src="./img/girl.png" alt="" width="397" height="397">
+                </div>
+            </div>
+            <div class="options">
+                <input id="q1-y" class="btn" name="q1" type="radio" value="1"><label class="label"
+                    for="q1-y">YES</label>
+                <input id="q1-n" class="btn" name="q1" type="radio" value="0"><label class="label" for="q1-n">NO</label>
+            </div>
+            <div class="back">
+                <button>戻る</button>
+            </div>
+        </div>
+    </main>
 
     <script src="app.js"></script>
 </body>
+
 </html>

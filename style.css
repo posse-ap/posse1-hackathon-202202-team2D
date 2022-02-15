@@ -1,28 +1,197 @@
-html{
+html {
     font-size: 62.5%;
 }
 /* html全体のサイズを変えることでremを一括コントロール */
 
- @media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     html {
         font-size: 50%;
-       
     }
 }
-body{
+* {
     box-sizing: border-box;
 }
 
 img {
     max-width: 100%;
-  }
+}
 
-  /* ----------コンテンツ幅を設定するための共通クラス--------- */
+/* ----------コンテンツ幅を設定するための共通クラス--------- */
 
-  .wrapper{
-      /* とりあえずこの値で */
+.wrapper {
+    /* とりあえずこの値で */
     max-width: 120rem;
-       /* 重要：paddingでwrapperのついたすべてのタグの左右幅をコントロール */
+    /* 重要：paddingでwrapperのついたすべてのタグの左右幅をコントロール */
     padding: 0 3.2rem;
     margin: 0 auto;
-  }
+}
+
+/* ----------以下、mainのcssを実装----------------------- */
+
+header {
+    border: red 1px solid;
+}
+
+.header_inner {
+    border: 1px solid blue;
+}
+
+.header_logo {
+    border: 1px solid gold;
+    padding: 1rem;
+}
+
+.header_logo img {
+    border: solid 1px black;
+    width: 30rem;
+    height: auto;
+}
+
+.main {
+    border: 1px solid red;
+    margin-top: 4rem;
+    padding: 3rem;
+    position: relative;
+}
+
+.main_center {
+    border: 1px solid blue;
+    width: calc(100% - 10rem);
+    margin: auto;
+    width: 110rem;
+}
+
+.fade {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s 0.5s ease;
+}
+
+.main_title {
+    border: 1px solid purple;
+    text-align: center;
+    padding: 3rem;
+    font-size: 4rem;
+}
+
+.main_imgs {
+    border: 1px solid purple;
+    padding: 5rem;
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+}
+
+.main_img {
+    border: 1px solid gold;
+}
+
+.main_img img {
+    border: 1px solid black;
+    width: 20rem;
+    height: auto;
+}
+
+.main_start {
+    border: 1px solid purple;
+    text-align: center;
+    padding: 3rem;
+}
+
+.main_start button {
+    width: 30rem;
+    height: 5rem;
+    cursor: pointer;
+    background-color: aquamarine;
+}
+
+.date {
+    border: 1px solid purple;
+    margin: 2rem 0;
+}
+
+.date p {
+    border: 1px solid greenyellow;
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.questions {
+    border: 1px solid purple;
+}
+
+.question_title {
+    border: 1px solid greenyellow;
+    text-align: center;
+    padding: 1rem;
+    font-size: 3rem;
+}
+
+.question_img {
+    border: 1px solid gold;
+    width: 100%;
+    text-align: center;
+}
+
+.question_img img {
+    border: 1px solid black;
+    width: 28rem;
+    height: auto;
+}
+
+.options {
+    border: 1px solid purple;
+    display: flex;
+    gap: 20rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.back {
+    text-align: center;
+    padding: 1rem;
+}
+
+.back button {
+    background-color: aqua;
+    cursor: pointer;
+    width: 30rem;
+    height: 5rem;
+    font-size: 2rem;
+}
+
+.fade_in {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.fade_out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"]:checked + label {
+    background: #31a9ee; 
+    color: #ffffff; 
+}
+.label:hover {
+    background-color: #e2edf9;
+}
+
+.label {
+    display: block;
+    width: 30rem;
+    height: 5rem;
+    color: #b20000;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+    border: 2px solid #006dd9;
+    border-radius: 5px;
+}
