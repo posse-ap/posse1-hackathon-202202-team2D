@@ -363,7 +363,9 @@ header {
     border: 2px solid #006dd9;
     border-radius: 5px;
 }
-
+.label1:hover {
+    background-color: #e2edf9;
+}
 .label2{
     display: none;
     width: 30rem;
@@ -447,9 +449,7 @@ input[type="radio"]:checked+label {
     color: #ffffff;
 }
 
-.label:hover {
-    background-color: #e2edf9;
-}
+
 
 /* .label1 {
     display: block;
