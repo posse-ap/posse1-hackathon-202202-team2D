@@ -87,6 +87,15 @@ html {
         border: none !important;
     }
 
+    
+.balloon_text {
+    position: absolute;
+    top: 40%;
+    right: 2%;
+    font-size: 1.3rem;
+    z-index: 2;
+    transform: rotate(29deg);}
+
 
 
 }
@@ -284,6 +293,14 @@ header {
     position: absolute;
     top: 0%;
     right: 11%;
+}
+
+.balloon_text{
+    position: absolute;
+    top: 47%;
+    right: 18%;
+    font-size: 1.3rem;
+    z-index: 2;
 }
 
 
