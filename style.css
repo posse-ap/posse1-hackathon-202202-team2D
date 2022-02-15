@@ -62,6 +62,33 @@ html {
     .fade {
         left: 0%;
     }
+
+    .question_img {
+        border: 1px solid gold;
+        text-align: left !important;
+        margin-left: 1rem!important;
+        position: relative!important;
+    }
+    
+    .question_img img {
+        border: 1px solid black!important;
+        width: 26rem!important;
+        height: auto!important;
+    }
+
+    .balloon{
+        position: absolute!important;
+        top: 0%!important;
+        width: 45%!important;
+        right: -1%!important;
+    }
+
+    .balloon img{
+        border: none !important;
+    }
+
+
+
 }
 
 * {
@@ -253,10 +280,17 @@ header {
     font-size: 3rem;
 }
 
+.balloon{
+    position: absolute;
+    top: 0%;
+    right: 11%;
+}
+
+
 .question_img {
     border: 1px solid gold;
-    width: 100%;
     text-align: center;
+    position: relative;
 }
 
 .question_img img {
