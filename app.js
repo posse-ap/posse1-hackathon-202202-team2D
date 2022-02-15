@@ -40,15 +40,15 @@ options.forEach(option =>{
 // }
 
 
-let back = document.querySelector('.back');
-back.addEventListener('click', function(){
-    console.log(this);
-    day--;
-    questionArea.textContent= questionContent[day-1]
-    progress[day].classList.remove('complete');
-    updateDay();
-    return;
-})
+// let back = document.querySelector('.back');
+// back.addEventListener('click', function(){
+//     console.log(this);
+//     day--;
+//     questionArea.textContent= questionContent[day-1]
+//     progress[day].classList.remove('complete');
+//     updateDay();
+//     return;
+// })
 
 let question1 = document.querySelector(".question1");
 let question2 = document.querySelector(".question2");
@@ -155,7 +155,45 @@ label3[1].addEventListener('click', function(){
     return;
 })
 
+const resultImage = document.querySelector('.result_img img');
+const modal = document.getElementById('modal');
+const modalOverLay = document.querySelector('.modal_overlay');
+let spinner = document.getElementById('my-spinner');
 
+label4[0].addEventListener('click', function(){
+    console.log(this);
+    bodyTransformation--;
+    // messageArea.textContent = eachBodyAndMessage[bodyTransformation][1];
+    question4.style.display = "none";
+     // loadingを表示させる
+  let circle_border = document.getElementById('circle-border');
+  let circle_core = document.getElementById('circle-core');
+  spinner.className = 'spinner-box';
+  circle_border.className = 'circle-border';
+  circle_core.className = 'circle-core';
+  // .loaded を追加してローディング表示を消す
+  // spinner.classList.toggle('loaded');
+  // console.log(submit_info);
+  setTimeout(disappearSpinner, 1990);
+  setTimeout(showFinish, 2000);
+   
+    resultImage.src = eachBodyAndMessage[bodyTransformation][0];
+    return;
+})
+
+label4[1].addEventListener('click', function(){
+    bodyTransformation++;
+})
+
+// loadingを消す
+function disappearSpinner(){
+    spinner.style.display = "none";
+  }
+
+  function showFinish() {
+    modal.classList.remove('fade_out');
+    modalOverLay.style.display ="block";
+  };
 
 /* ============================
 かもりゅう

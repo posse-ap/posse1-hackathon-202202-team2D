@@ -12,7 +12,27 @@ html {
     .fade {
         padding-top: 15rem;
     }
-   
+    .label1{
+        width: 15rem;
+    }
+    
+    .label2{
+        width: 15rem;
+    }
+    .label3{
+        width: 15rem;
+    }
+    .label4{
+        width: 15rem;
+    }
+    .modal{
+        top: 100%!important;
+        height: 90%!important;
+    }
+    .circle-border {
+        top: -50%!important;
+        left:40%!important;
+    }
 }
 
 * {
@@ -252,8 +272,8 @@ header {
     display: none;
 } */
 .label1{
-    display: none;
-    width: 15rem;
+    display: block;
+    width: 30rem;
     height: 5rem;
     color: #b20000;
     text-align: center;
@@ -265,7 +285,7 @@ header {
 
 .label2{
     display: none;
-    width: 15rem;
+    width: 30rem;
     height: 5rem;
     color: #b20000;
     text-align: center;
@@ -282,7 +302,7 @@ header {
 } */
 .label3{
     display: none;
-    width: 15rem;
+    width: 30rem;
     height: 5rem;
     color: #b20000;
     text-align: center;
@@ -299,7 +319,7 @@ header {
 } */
 .label4{
     display: none;
-    width: 15rem;
+    width: 30rem;
     height: 5rem;
     color: #b20000;
     text-align: center;
@@ -350,7 +370,7 @@ input[type="radio"]:checked+label {
     background-color: #e2edf9;
 }
 
-.label1 {
+/* .label1 {
     display: block;
     width: 30rem;
     height: 5rem;
@@ -360,7 +380,7 @@ input[type="radio"]:checked+label {
     cursor: pointer;
     border: 2px solid #006dd9;
     border-radius: 5px;
-}
+} */
 
 .modal {
     /* display: none; */
@@ -434,3 +454,67 @@ input[type="radio"]:checked+label {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+
+
+
+ /* loading------------------------------------- */
+
+  /* KEYFRAMES */
+
+  @keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to{
+      transform: rotate(359deg);
+    }
+  }
+  
+    /* ALTERNATING ORBITS */
+  
+    .spinner-box {
+      /* display: none; */
+      z-index: 11;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      /* background-color: #1d2630; */
+      /* opacity: 0.6; */
+      /* -webkit-transition: all 2s ;  */
+      /* 2秒でフェードアウト */
+            /* transition: all 2s ; */
+    }
+  
+  .circle-border {
+    position: absolute;
+    top:-70%;
+    left:45%;
+    /* top: 25%; */
+    /* left: 25%; */
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgb(63, 128, 249);
+    background: linear-gradient(0deg, rgba(63,249,220,0.1) 33%, rgba(63,128,249,1) 100%);
+    animation: spin .8s linear 0s infinite;
+  }
+  
+  .circle-core {
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+    border-radius: 50%;
+  }
+  
+  /* ローディング表示を消すための定義 */
+  .spinner-box.loaded{
+    opacity:0;
+    visibility:hidden;
+  }
+  /* .result_img{
+      max-width: 100%;
+  } */
