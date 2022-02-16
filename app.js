@@ -64,12 +64,12 @@ let label4 = document.getElementsByClassName("label4");
 let eachBodyAndMessage = [
             ["./img/girl0.jpg", "yo!"],
             ["./img/girl1.jpg", "Let's gooo!"],
-            ["./img/girl2.jpg", "きんにくムッキムキ"],
+            ["./img/girl2.jpg", "YES!!"],
             ["./img/girl3.jpg", "愛があれば十分でしょ？"],
             ["./img/girl4.jpg", "しゅんいつもにやにやしているね"],
             ["./img/girl5.jpg", "お金ないとなあ、、"],
             ["./img/girl6.jpg", "気高く生きるのよ私！"],
-            ["./img/girl7.jpg", "オレオレ、、、詐欺"],
+            ["./img/girl7.jpg", "これが..オレオレ詐欺..."],
             ["./img/girl8.jpg", "ハ～ロ～"]
             ];
 

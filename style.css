@@ -20,6 +20,7 @@ html {
 
     body{
         overflow: hidden;
+        background-image: url(./img/background_img.jpg);
     };
     
     .main{
@@ -28,32 +29,59 @@ html {
     /* .fade {
         padding-top: 5rem;
     } */
-    .main_center{
+    /* .main_center{
         background-image: url(./img/background_img.jpg);
+    } */
+
+    .main_start button{
+        height: 7rem !important;
+
+
     }
+
     .question1{
         flex-flow: column;
         align-items: center;
         justify-content: center;
         gap: 3rem!important;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem!important;
+        margin-top: 17px;
     }
     .question2{
         flex-flow: column;
         align-items: center;
         justify-content: center;
         gap: 3rem!important;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem!important;
+        margin-top: 17px;
     }
     .question3{
         flex-flow: column;
         align-items: center;
         justify-content: center;
         gap: 3rem!important;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem!important;
+        margin-top: 17px;
     }
     .question4{
         flex-flow: column;
         align-items: center;
         justify-content: center;
         gap: 3rem!important;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem!important;
+        margin-top: 17px;
     }
     .label1{
         width: 15rem;
@@ -82,8 +110,9 @@ html {
 
     .question_img {
         text-align: left !important;
-        margin-left: 1rem!important;
-        position: relative!important;
+    margin-left: 1rem!important;
+    position: relative!important;
+    margin-top: 2rem !important;
     }
     
     .question_img img {
@@ -104,7 +133,7 @@ html {
     position: absolute !important;
     top: 40%!important;
     right: 2%!important;
-    font-size: 1.3rem!important;
+    font-size: 1.7rem!important;
     z-index: 2!important;
     transform: rotate(0deg)!important;
 }
@@ -257,6 +286,7 @@ header{
 .main_suggest{
     text-align: center;
     margin-bottom: 3rem;
+    font-weight: 550;
 }
 
 .main_imgs {
@@ -281,16 +311,17 @@ header{
 }
 
 .main_start button {
-    width: 30rem;
+    width: 31rem;
     height: 5rem;
     cursor: pointer;
     background-color: goldenrod;
     text-align: center;
     font-size:  3rem;;
     cursor: pointer;
-    color: #b20000;
+    color: #FFFFFF;
     font-size: 3rem;
     font-weight: 900;
+    border-radius: 10px;
 
 }
 
@@ -312,6 +343,8 @@ header{
     text-align: center;
     padding: 1rem;
     font-size: 3rem;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 10px;
 }
 
 .balloon{
@@ -323,9 +356,9 @@ header{
 
 .balloon_text{
     position: absolute;
-    top: 47%;
-    right: 20%;
-    font-size: 1.3rem;
+    top: 43%;
+    right: 12%;
+    font-size: 1.8rem;
     z-index: 2;
     transform: rotate(0deg);
 }
@@ -333,6 +366,7 @@ header{
 .question_img {
     text-align: center;
     position: relative;
+    margin-top: 1rem;
 }
 
 .question_img img {
@@ -372,7 +406,7 @@ label{
     display: none;
     width: 30rem;
     height: 5rem;
-    color: #b20000;
+    color: #FFFFFF;	
     text-align: center;
     line-height: 45px;
     cursor: pointer;
