@@ -267,7 +267,18 @@ img {
     width: 30rem;
     height: 5rem;
     cursor: pointer;
-    background-color: aquamarine;
+    background-color: goldenrod;
+    text-align: center;
+    font-size:  3rem;;
+    cursor: pointer;
+    color: #b20000;
+    font-size: 3rem;
+    font-weight: 900;
+
+}
+
+.main_start button:hover{
+    transform: scale(1.1);
 }
 
 .date {
@@ -353,35 +364,42 @@ label{
     font-size: 3rem;
     font-weight: 900;
 }
+
 .label1{
     display: block;
+    background-color: goldenrod
 }
 .label1:hover {
-    background-color: #e2edf9;
+    transform: scale(1.1);
 }
 .label2{
     display: none;
+    background-color: goldenrod
 }
 .label2:hover {
-    background-color: #e2edf9;
+    transform: scale(1.1);
 }
 /* .btn3{
     display: none;
 } */
 .label3{
     display: none;
+    background-color: goldenrod
 }
 .label3:hover {
-    background-color: #e2edf9;
+    /* background-color: #ffebcd	; */
+    transform: scale(1.1);
 }
 /* .btn4{
     display: none;
 } */
 .label4{
     display: none;
+    background-color: goldenrod
 }
 .label4:hover {
-    background-color: #e2edf9;
+    /* background-color: #ffebcd; */
+    transform: scale(1.1);
 }
 /* .stop_day{
     pointer-events: none;
