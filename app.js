@@ -65,15 +65,15 @@ let label4 = document.getElementsByClassName("label4");
 // let q1 = document.getElementsByName("q1");
 //変数bodyTransformation(0<4<8の9段階）の値に応じて、取り出す画像を変化させる
 let eachBodyAndMessage = [
-            ["./img/girl0.jpg", ""],
-            ["./img/girl1.jpg", ""],
-            ["./img/girl2.jpg", "迷うよね～"],
+            ["./img/girl0.jpg", "yo!"],
+            ["./img/girl1.jpg", "Let's gooo!"],
+            ["./img/girl2.jpg", "きんにくムッキムキ"],
             ["./img/girl3.jpg", "愛があれば十分でしょ？"],
-            ["./img/girl4.jpg", "楽しいよね"],
+            ["./img/girl4.jpg", "しゅんいつもにやにやしているね"],
             ["./img/girl5.jpg", "お金ないとなあ、、"],
             ["./img/girl6.jpg", "気高く生きるのよ私！"],
-            ["./img/girl7.jpg", "あのヒトしか考えられない！"],
-            ["./img/girl8.jpg", "やっぱり、毎日連絡はとるべきよね！"]
+            ["./img/girl7.jpg", "オレオレ、、、詐欺"],
+            ["./img/girl8.jpg", "ハ～ロ～"]
             ];
 
 let bodyTransformation = 4;
@@ -210,15 +210,16 @@ function disappearSpinner(){
 
 
 let resultMessage = [
-    "人生何回目ですか？あなた、凄い！惚れちゃう！！",
-    "法律であなたの愛をしばることはできないわ、未成年が適齢期よ",
-    "あなたやるわね！",
-    "運が悪かったみたいね",
+    "来世でのご好運を願っています",
+    "う～ん...",
+    "あなたとは、あわなそう",
+    "遅くなりそう（泣き）",
     "まぁまぁわね！",
-    "う～ん何ともいいがたいな～",
-    "あなたとは、あわなそう。",
-    "は～、ダメね～",
-    "来世でのご好運を願っています"
+    "運が悪かったみたいね",
+    "あなた、やるわね！",
+    "法律であなたの愛をしばることはできないわ、未成年が適齢期よ",
+    "人生何回目、あなた？惚れちゃう！",     
+    
 ];
 
 let resultArea = document.getElementById("result_area");
