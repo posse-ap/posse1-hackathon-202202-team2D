@@ -118,6 +118,10 @@ html {
 
 img {
     max-width: 100%;
+    /* border-radius: 10%; */
+}
+.header_logo img{
+    border-radius: 0%;
 }
 
 /* ----------コンテンツ幅を設定するための共通クラス--------- */
@@ -435,7 +439,7 @@ input[type="radio"]:checked+label {
     transform: translate(-50%, -50%);
     background-color: #FFFFFF;
     width: 92%;
-    height: 70%;
+    height: 100%;
     z-index: 2;
     border-radius: 4rem;
 
