@@ -593,3 +593,9 @@ input[type="radio"]:checked+label {
       height: 100%;
       object-fit: cover;
   }
+  .posse_link{
+      position: absolute;
+      bottom: 0;
+      right: 1rem;
+      font-size: 2rem;
+  }
