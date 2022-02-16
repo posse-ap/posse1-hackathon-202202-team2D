@@ -223,6 +223,19 @@ let resultMessage = [
 
 let resultArea = document.getElementById("result_area");
 
+//ツイートエリアの作成
+
+const button = document.getElementById('submit_info');
+let $url = 'https://twitter.com/intent/tweet?'
+button.setAttribute('href', $url);
+
+button.addEventListener('click', ()=>{
+  
+  $url += 'text=「あなたの結婚適齢期は？」'+`%0a${ resultArea.textContent}`+`%0a&url=https://posse-ap.com/`+`%0a&hashtags=結婚適齢期`+`%0a&hashtags=POSSE`
+  console.log($url);
+  // location.href = $url;
+  window.open($url,'_blank');
+})
 /* ============================
 かもりゅう
 ============================ */
