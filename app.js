@@ -10,7 +10,7 @@ let day = 1;
 const questionArea = document.querySelector(".question_title")
 let questionContent =[
     "恋人が髪型を変えてきたら似合っていなくても褒める",
-    "優しさでは結婚する気になれない",
+    "優しさだけでは、結婚する気になれない",
     "ディズニーに行くとしたらランド派だ",
     "長続きの秘訣はおはようおやすみLINE",
 ];
@@ -62,15 +62,15 @@ let label4 = document.getElementsByClassName("label4");
 // let q1 = document.getElementsByName("q1");
 //変数bodyTransformation(0<4<8の9段階）の値に応じて、取り出す画像を変化させる
 let eachBodyAndMessage = [
-            ["./img/girl0.jpg", "さしすせそ"],
-            ["./img/girl1.jpg", "かきくけこ"],
-            ["./img/girl2.jpg", "あいうえお"],
-            ["./img/girl3.jpg", "サンプル"],
-            ["./img/girl4.jpg", "イケメン大好き"],
+            ["./img/girl0.jpg", "yo!"],
+            ["./img/girl1.jpg", "Let's gooo!"],
+            ["./img/girl2.jpg", "YES!!"],
+            ["./img/girl3.jpg", "愛があれば十分でしょ？"],
+            ["./img/girl4.jpg", "しゅんいつもにやにやしているね"],
             ["./img/girl5.jpg", "お金ないとなあ、、"],
             ["./img/girl6.jpg", "気高く生きるのよ私！"],
-            ["./img/girl7.jpg", "あのヒトしか考えられない！"],
-            ["./img/girl8.jpg", "ふわああ"]
+            ["./img/girl7.jpg", "これが..オレオレ詐欺..."],
+            ["./img/girl8.jpg", "ハ～ロ～"]
             ];
 
 let bodyTransformation = 4;
@@ -109,7 +109,7 @@ label1[1].addEventListener('click', function(){
 // 二問目の条件分岐
 label2[0].addEventListener('click', function(){
     console.log(this);
-    bodyTransformation--;
+    bodyTransformation++;
     currentImage.src = eachBodyAndMessage[bodyTransformation][0];
     balloonText .textContent = eachBodyAndMessage[bodyTransformation][1];
     question2.style.display = "none";
@@ -120,7 +120,7 @@ label2[0].addEventListener('click', function(){
 })
 label2[1].addEventListener('click', function(){
     console.log(this);
-    bodyTransformation++;
+    bodyTransformation--;
     currentImage.src = eachBodyAndMessage[bodyTransformation][0];
     balloonText .textContent = eachBodyAndMessage[bodyTransformation][1];
     question2.style.display = "none";
@@ -160,7 +160,7 @@ let spinner = document.getElementById('my-spinner');
 
 label4[0].addEventListener('click', function(){
     console.log(this);
-    bodyTransformation--;
+    bodyTransformation++;
     // messageArea.textContent = eachBodyAndMessage[bodyTransformation][1];
     question4.style.display = "none";
      // loadingを表示させる
@@ -179,7 +179,7 @@ label4[0].addEventListener('click', function(){
 })
 
 label4[1].addEventListener('click', function(){
-    bodyTransformation++;
+    bodyTransformation--;
     question4.style.display = "none";
     // loadingを表示させる
  let circle_border = document.getElementById('circle-border');
@@ -207,15 +207,16 @@ function disappearSpinner(){
 
 
 let resultMessage = [
-    "あああああ",
+    "来世でのご好運を願っています",
+    "う～ん...",
+    "あなたとは、あわなそう",
+    "遅くなりそう（泣き）",
+    "まぁまぁわね！",
+    "運が悪かったみたいね",
+    "あなた、やるわね！",
     "法律であなたの愛をしばることはできないわ、未成年が適齢期よ",
-    "うううううう",
-    "ええええええ",
-    "おおおおおお",
-    "かかかかかか",
-    "きききききき",
-    "くくくくくく",
-    "来世でのご好運を願っています"
+    "人生何回目、あなた？惚れちゃう！",     
+    
 ];
 
 let resultArea = document.getElementById("result_area");
