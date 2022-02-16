@@ -6,7 +6,7 @@ html {
 
 @media screen and (min-width: 768px){
     .main_center{
-        background-image: url("./img/LINE_ALBUM_2022.2.15_220216.jpg");
+        background-image: url("./img/background_img_pc.jpg");
     }
 }
 
@@ -28,7 +28,7 @@ html {
         padding-top: 5rem;
     } */
     .main_center{
-        background-image: url(./img/10670633i.jpg);
+        background-image: url(./img/background_img.jpg);
     }
     .question1{
         flex-flow: column;
@@ -80,14 +80,12 @@ html {
     }
 
     .question_img {
-        border: 1px solid gold;
         text-align: left !important;
         margin-left: 1rem!important;
         position: relative!important;
     }
     
     .question_img img {
-        border: 1px solid black!important;
         width: 26rem!important;
         height: auto!important;
     }
@@ -138,23 +136,16 @@ img {
 
 /* ----------以下、mainのcssを実装----------------------- */
 
-header {
-    border: red 1px solid;
-}
-
 .header_inner {
-    border: 1px solid blue;
     display: flex;
     justify-content: space-between;
 }
 
 .header_logo {
-    border: 1px solid gold;
     width: 23%;
 }
 
 .header_logo img {
-    border: solid 1px black;
     height: auto;
 }
 
@@ -165,12 +156,10 @@ header {
 
 .progress {
     margin-top: 2rem;
-    /* border: 1px solid red; */
 }
 
 .progress_list {
     position: relative;
-    border: 1px solid blue;
     width: 50rem;
     margin-right: 0;
     margin-left: auto;
@@ -185,7 +174,6 @@ header {
     text-align: center;
     width: 25%;
     font-weight: bold;
-    border: 1px solid purple;
 }
 
 .progress_item:before {
@@ -224,24 +212,20 @@ header {
 }
 
 .main {
-    border: 1px solid red;
     margin-top: 2rem;
-    /* padding: 3rem; */
     position: relative;
     width: 100%;
-    /* height: 1000rem; */
 }
 
 .main_center {
-    border: 1px solid blue;
     width: calc(100% - 10rem);
-    /* margin: auto; */
     width: 110rem;
     max-width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     margin-right: auto;
     margin-left: auto;
+    padding: 1rem;
 }
 
 .fade {
@@ -262,25 +246,18 @@ header {
 }
 
 .main_imgs {
-    border: 1px solid purple;
     padding: 1rem;
     display: flex;
     gap: 1rem;
     justify-content: center;
 }
 
-.main_img {
-    border: 1px solid gold;
-}
-
 .main_img img {
-    border: 1px solid black;
     width: 15rem;
     height: auto;
 }
 
 .main_start {
-    border: 1px solid purple;
     text-align: center;
     padding: 3rem;
 }
@@ -293,23 +270,16 @@ header {
 }
 
 .date {
-    border: 1px solid purple;
     margin: 1rem 0;
 }
 
 .date p {
-    border: 1px solid greenyellow;
     font-size: 3rem;
     text-align: center;
     padding: 1rem;
 }
 
-.questions {
-    border: 1px solid purple;
-}
-
 .question_title {
-    border: 1px solid greenyellow;
     text-align: center;
     padding: 1rem;
     font-size: 3rem;
@@ -331,25 +301,14 @@ header {
     transform: rotate(0deg);
 }
 
-
 .question_img {
-    border: 1px solid gold;
     text-align: center;
     position: relative;
 }
 
 .question_img img {
-    border: 1px solid black;
     width: 28rem;
     height: auto;
-}
-
-.options {
-    border: 1px solid purple;
-    /* display: flex;
-    gap: 20rem;
-    justify-content: center;
-    padding: 1rem; */
 }
 
 /* 設問毎のボタンを区別する */
