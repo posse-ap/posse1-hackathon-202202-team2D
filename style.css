@@ -21,6 +21,8 @@ html {
     body{
         overflow: hidden;
         background-image: url(./img/background_img.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
     };
     
     .main{
@@ -290,17 +292,16 @@ header{
 }
 
 .main_imgs {
-
-    background-color: rgba(203, 239, 241, 0.3);
+    /* background-color: rgba(203, 239, 241, 0.3); */
     padding-left: 10rem;
     margin-top: 10rem;
-    /* padding: 1rem; */
     display: flex;
     gap: 5rem;
     justify-content: center;
 }
 
 .main_img img {
+    box-shadow: 0.5rem 0.5rem;
     width: 15rem;
     height: auto;
 }

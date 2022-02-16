@@ -8,26 +8,26 @@ let progress = document.querySelectorAll('.progress_list .progress_item');
 // // yes/noおされたら、day(i+)となる
 let day = 1;
 const questionArea = document.querySelector(".question_title")
-let questionContent =[
+let questionContent = [
     "恋人が髪型を変えてきたら似合っていなくても褒める",
     "優しさだけでは、結婚する気になれない",
     "ディズニーに行くとしたらランド派だ",
     "長続きの秘訣はおはようおやすみLINE",
 ];
-const updateDay = function() {
+const updateDay = function () {
     const changeDay = document.querySelector('.date p');
     changeDay.textContent = `第${day}問`;
-    }
+}
 
 let options = document.querySelectorAll('.options input');
-options.forEach(option =>{
-    option.addEventListener('click', function(){
+options.forEach(option => {
+    option.addEventListener('click', function () {
         console.log(this);
         day++;
-        questionArea.textContent= questionContent[day-1]
-        progress[day-1].classList.add('complete');
+        questionArea.textContent = questionContent[day - 1]
+        progress[day - 1].classList.add('complete');
         updateDay();
-        
+
         return;
     })
 })
@@ -62,16 +62,16 @@ let label4 = document.getElementsByClassName("label4");
 // let q1 = document.getElementsByName("q1");
 //変数bodyTransformation(0<4<8の9段階）の値に応じて、取り出す画像を変化させる
 let eachBodyAndMessage = [
-            ["./img/girl0.jpg", "yo!"],
-            ["./img/girl1.jpg", "Let's gooo!"],
-            ["./img/girl2.jpg", "YES!!"],
-            ["./img/girl3.jpg", "愛があれば十分でしょ？"],
-            ["./img/girl4.jpg", "しゅんいつもにやにやしているね"],
-            ["./img/girl5.jpg", "お金ないとなあ、、"],
-            ["./img/girl6.jpg", "気高く生きるのよ私！"],
-            ["./img/girl7.jpg", "これが..オレオレ詐欺..."],
-            ["./img/girl8.jpg", "ハ～ロ～"]
-            ];
+    ["./img/girl0.jpg", "yo!"],
+    ["./img/girl1.jpg", "Let's go!"],
+    ["./img/girl2.jpg", "YES!!"],
+    ["./img/girl3.jpg", "愛があれば十分よ？"],
+    ["./img/girl4.jpg", "いつもにやにやしているね"],
+    ["./img/girl5.jpg", "お金ないとなあ、、"],
+    ["./img/girl6.jpg", "気高く生きるのよ私！"],
+    ["./img/girl7.jpg", "これがオレオレ詐欺..."],
+    ["./img/girl8.jpg", "ハ～ロ～"]
+];
 
 let bodyTransformation = 4;
 const currentImage = document.querySelector('.question_img img');
@@ -83,22 +83,22 @@ const balloonText = document.querySelector('.balloon_text');
 // おはようおやすみLINEを送るか？（y:ばあさん n:若返り)
 
 // 一問目の条件分岐
-label1[0].addEventListener('click', function(){
+label1[0].addEventListener('click', function () {
     console.log(this);
     bodyTransformation--;
     currentImage.src = eachBodyAndMessage[bodyTransformation][0];
-    balloonText .textContent = eachBodyAndMessage[bodyTransformation][1];
+    balloonText.textContent = eachBodyAndMessage[bodyTransformation][1];
     question1.style.display = "none";
     question2.style.display = "flex";
     label2[0].style.display = "block";
     label2[1].style.display = "block";
     return;
 })
-label1[1].addEventListener('click', function(){
+label1[1].addEventListener('click', function () {
     console.log(this);
     bodyTransformation++;
     currentImage.src = eachBodyAndMessage[bodyTransformation][0];
-    balloonText .textContent = eachBodyAndMessage[bodyTransformation][1];
+    balloonText.textContent = eachBodyAndMessage[bodyTransformation][1];
     question1.style.display = "none";
     question2.style.display = "flex";
     label2[0].style.display = "block";
@@ -107,22 +107,22 @@ label1[1].addEventListener('click', function(){
 })
 
 // 二問目の条件分岐
-label2[0].addEventListener('click', function(){
+label2[0].addEventListener('click', function () {
     console.log(this);
     bodyTransformation++;
     currentImage.src = eachBodyAndMessage[bodyTransformation][0];
-    balloonText .textContent = eachBodyAndMessage[bodyTransformation][1];
+    balloonText.textContent = eachBodyAndMessage[bodyTransformation][1];
     question2.style.display = "none";
     question3.style.display = "flex";
     label3[0].style.display = "block";
     label3[1].style.display = "block";
     return;
 })
-label2[1].addEventListener('click', function(){
+label2[1].addEventListener('click', function () {
     console.log(this);
     bodyTransformation--;
     currentImage.src = eachBodyAndMessage[bodyTransformation][0];
-    balloonText .textContent = eachBodyAndMessage[bodyTransformation][1];
+    balloonText.textContent = eachBodyAndMessage[bodyTransformation][1];
     question2.style.display = "none";
     question3.style.display = "flex";
     label3[0].style.display = "block";
@@ -130,22 +130,22 @@ label2[1].addEventListener('click', function(){
     return;
 })
 // 三問目の条件分岐
-label3[0].addEventListener('click', function(){
+label3[0].addEventListener('click', function () {
     console.log(this);
     bodyTransformation--;
     currentImage.src = eachBodyAndMessage[bodyTransformation][0];
-    balloonText .textContent = eachBodyAndMessage[bodyTransformation][1];
+    balloonText.textContent = eachBodyAndMessage[bodyTransformation][1];
     question3.style.display = "none";
     question4.style.display = "flex";
     label4[0].style.display = "block";
     label4[1].style.display = "block";
     return;
 })
-label3[1].addEventListener('click', function(){
+label3[1].addEventListener('click', function () {
     console.log(this);
     bodyTransformation++;
     currentImage.src = eachBodyAndMessage[bodyTransformation][0];
-    balloonText .textContent = eachBodyAndMessage[bodyTransformation][1];
+    balloonText.textContent = eachBodyAndMessage[bodyTransformation][1];
     question3.style.display = "none";
     question4.style.display = "flex";
     label4[0].style.display = "block";
@@ -158,65 +158,64 @@ const modal = document.getElementById('modal');
 const modalOverLay = document.querySelector('.modal_overlay');
 let spinner = document.getElementById('my-spinner');
 
-label4[0].addEventListener('click', function(){
+label4[0].addEventListener('click', function () {
     console.log(this);
     bodyTransformation++;
     // messageArea.textContent = eachBodyAndMessage[bodyTransformation][1];
     question4.style.display = "none";
-     // loadingを表示させる
-  let circle_border = document.getElementById('circle-border');
-  let circle_core = document.getElementById('circle-core');
-  spinner.className = 'spinner-box';
-  circle_border.className = 'circle-border';
-  circle_core.className = 'circle-core';
-  setTimeout(disappearSpinner, 1990);
-  setTimeout(showFinish, 2000);
-   
+    // loadingを表示させる
+    let circle_border = document.getElementById('circle-border');
+    let circle_core = document.getElementById('circle-core');
+    spinner.className = 'spinner-box';
+    circle_border.className = 'circle-border';
+    circle_core.className = 'circle-core';
+    setTimeout(disappearSpinner, 1990);
+    setTimeout(showFinish, 2000);
+
     resultImage.src = eachBodyAndMessage[bodyTransformation][0];
     resultArea.textContent = resultMessage[bodyTransformation];
     resultMessage
     return;
 })
 
-label4[1].addEventListener('click', function(){
+label4[1].addEventListener('click', function () {
     bodyTransformation--;
     question4.style.display = "none";
     // loadingを表示させる
- let circle_border = document.getElementById('circle-border');
- let circle_core = document.getElementById('circle-core');
- spinner.className = 'spinner-box';
- circle_border.className = 'circle-border';
- circle_core.className = 'circle-core';
- setTimeout(disappearSpinner, 1990);
- setTimeout(showFinish, 2000);
-  
-   resultImage.src = eachBodyAndMessage[bodyTransformation][0];
-   resultArea.textContent = resultMessage[bodyTransformation];
-   return;
+    let circle_border = document.getElementById('circle-border');
+    let circle_core = document.getElementById('circle-core');
+    spinner.className = 'spinner-box';
+    circle_border.className = 'circle-border';
+    circle_core.className = 'circle-core';
+    setTimeout(disappearSpinner, 1990);
+    setTimeout(showFinish, 2000);
+
+    resultImage.src = eachBodyAndMessage[bodyTransformation][0];
+    resultArea.textContent = resultMessage[bodyTransformation];
+    return;
 })
 
 // loadingを消す
-function disappearSpinner(){
+function disappearSpinner() {
     spinner.style.display = "none";
-  }
+}
 
-  function showFinish() {
+function showFinish() {
     modal.classList.remove('fade_out');
-    modalOverLay.style.display ="block";
-  };
+    modalOverLay.style.display = "block";
+};
 
 
 let resultMessage = [
-    "来世でのご好運を願っています",
+    "すでに赤い糸が。。。。？",
     "う～ん...",
-    "あなたとは、あわなそう",
-    "遅くなりそう（泣き）",
-    "まぁまぁわね！",
+    "法律やぶっちゃお♪",
+    "もしかして恋愛マスター？",
+    "これが人並ってやつ？",
     "運が悪かったみたいね",
-    "あなた、やるわね！",
-    "法律であなたの愛をしばることはできないわ、未成年が適齢期よ",
-    "人生何回目、あなた？惚れちゃう！",     
-    
+    "経験不足じゃない？？",
+    "若いうちは働いて、引退してから相手を見つけよう",
+    "諦めも肝心、来世でのご好運を願っています",
 ];
 
 let resultArea = document.getElementById("result_area");
@@ -226,7 +225,7 @@ let resultArea = document.getElementById("result_area");
 ============================ */
 let btn_start = document.getElementById('btn_start');
 let progress_list = document.querySelector('.progress_list');
-btn_start.addEventListener('click',function(){
+btn_start.addEventListener('click', function () {
     let main_center = document.getElementById('main_center');
     let main_center_day1 = document.getElementById('main_center_day1');
     main_center.classList.add('fade_out');
