@@ -1,7 +1,4 @@
 /* ============================
-まなき
-============================ */
-/* ============================
 ひろき
 ============================ */
 
@@ -19,7 +16,7 @@ let questionContent =[
 ];
 const updateDay = function() {
     const changeDay = document.querySelector('.date p');
-    changeDay.textContent = `Day${day}`;
+    changeDay.textContent = `第${day}問`;
     }
 
 let options = document.querySelectorAll('.options input');
@@ -238,9 +235,4 @@ btn_start.addEventListener('click',function(){
     progress_list.style.display = "flex";
 
 
-})
-
-
-/* ============================
-よしたか
-============================ */
+});
